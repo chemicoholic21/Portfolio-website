@@ -25,7 +25,7 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       // 1. Initial Page Load Reveal (Hero)
       const tl = gsap.timeline();
       tl.fromTo(
@@ -98,7 +98,7 @@ export default function Home() {
       // 4. Oryzo-like Parallax Projects Cards
       if (projectsContainerRef.current) {
         const projects = projectsContainerRef.current.querySelectorAll('.projects');
-        projects.forEach((proj, i) => {
+        projects.forEach((proj) => {
           const img = proj.querySelector('.projectImg');
           
           // Outer card smooth entry

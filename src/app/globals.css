@@ -492,15 +492,30 @@ h1, h2, h3, h4 { margin: 0; }
   .skills { flex-direction: column; gap: 8vw; padding-bottom: 8vw;}
   .skillName { font-size: 4.5vw; }
   .skillHeader { font-size: 3vw; margin-bottom: 4vw; }
-  .experience { grid-template-columns: 1fr; }
-  .experienceheading { font-size: 3vw; margin-bottom: 6vw;}
-  .companyBox { padding: 6vw 0 0 0; }
-  .experienceItem { padding: 4vw 0 8vw 0; border-top: none; }
-  .companyName { font-size: 7vw; margin-bottom: 2vw;}
-  .companyPeriod { font-size: 3vw; margin-bottom: 4vw;}
-  .companySkillName { font-size: 2.5vw; padding: 1vw 2vw;}
-  .experienceName { font-size: 5vw; }
-  .experienceDesc { font-size: 4vw; margin-top: 2vw; }
+  .experience { grid-template-columns: 1fr; gap: 8vw; }
+  .experienceheading { font-size: 4vw; margin-bottom: 8vw; grid-column: span 1; padding-bottom: 4vw; }
+  
+  .companyBox { 
+    padding: 12vw 0 0 0; 
+    border-top: 1px solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .experienceItem { 
+    padding: 0 0 16vw 0; 
+    border-top: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+  }
+  .companyName { font-size: 8vw; margin-bottom: 0; line-height: 1.1; }
+  .companyPeriod { font-size: 4vw; margin-bottom: 0; color: var(--text-muted); letter-spacing: 0.1em;}
+  .companySkills { gap: 3vw; margin-top: 2vw; }
+  .companySkillName { font-size: 3.5vw; padding: 2.5vw 5vw; }
+  
+  .experienceName { font-size: 6.5vw; line-height: 1.3; margin: 0; }
+  .experienceDesc { font-size: 5vw; line-height: 1.6; margin: 0; color: var(--text-muted); }
   .projectName { font-size: 8vw; margin-bottom: 4vw;}
   .projectDesc { font-size: 4vw; max-width: 100%; margin-bottom: 6vw;}
   .contactName { font-size: 12vw; }

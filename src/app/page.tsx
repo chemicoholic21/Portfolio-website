@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef, useMemo, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplashCursor from "@/components/reactbits/SplashCursor";
+import BlurText from "@/components/reactbits/BlurText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,6 +165,7 @@ export default function Home() {
 
   return (
     <div className="container" ref={containerRef}>
+      <SplashCursor BACK_COLOR={{ r: 0, g: 0, b: 0 }} TRANSPARENT={true} RAINBOW_MODE={false} COLOR="#333333" SPLAT_RADIUS={0.3} SPLAT_FORCE={7000} />
       <div className="navbar">
         <div className="nameLink">TANIYA SOUZA ©</div>
         <div className="pageLinks desktopLinks">
@@ -201,7 +204,7 @@ export default function Home() {
           </div>
         </div>
         <div className="nameSection" ref={nameSectionRef}>
-          <div className="aboutHeading">ABOUT</div>
+          <BlurText text="ABOUT" className="aboutHeading" delay={150} animateBy="letters" />
           <span>
             I'm an AI Product Engineer and builder who loves turning complex models into lightning-fast, user-friendly products. Whether I'm building data pipelines that analyze GitHub at scale or optimizing LLM latency for applications, my focus is bridging the gap between cutting-edge AI and practical reality.
           </span>
@@ -469,7 +472,7 @@ export default function Home() {
       </div>
 
       <div className="contact" id="contact" ref={contactRef}>
-        <div className="contactName">Let&apos;s get started.</div>
+        <BlurText text="Let's get started." className="contactName" animateBy="words" delay={100} />
         <a className="contactButton" href="mailto:taniyasouza@gmail.com">
           <button>taniyasouza@gmail.com</button>
         </a>
